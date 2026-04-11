@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/mainHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity" android:textAlignment="center">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tela de login"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="80dp"
+            app:layout_constraintHorizontal_bias="0.498" android:id="@+id/textViewTitulo" android:textColor="#F100BB"
+            android:textAlignment="center" android:textColorHighlight="#FF0000" android:textSize="34sp"
+            android:shadowColor="@color/black" android:shadowDx="3" android:shadowDy="3" android:shadowRadius="3"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/editTextEmail"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitulo"
+            android:layout_marginTop="100dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" android:textAlignment="center" android:hint="Digite seu e-mail"
+            android:textColorHint="#CA0BEA" app:layout_constraintHorizontal_bias="0.0"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/editTextPassword"
+            app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
+            android:layout_marginTop="100dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp" android:hint="Digite sua senha" android:textAlignment="center"
+            android:textColorHint="#CA0BEA" app:layout_constraintHorizontal_bias="0.0"/>
+    <Button
+            android:text="Login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/buttonLogin"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="72dp"
+            app:layout_constraintEnd_toStartOf="@+id/buttonCadastro" android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.191"/>
+    <Button
+            android:text="Cadasto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonLogin"
+            app:layout_constraintTop_toTopOf="@+id/buttonLogin" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp" app:layout_constraintStart_toEndOf="@+id/buttonLogin"
+            android:layout_marginEnd="16dp" android:id="@+id/buttonCadastro"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
