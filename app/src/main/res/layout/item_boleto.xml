@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="12dp"
+              android:layout_margin="8dp">
+
+    <TextView
+            android:id="@+id/txtTitulo"
+            android:text="Condominio "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+
+    <TextView
+            android:id="@+id/txtValor"
+            android:text="R$ 150,00"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+    />
+
+    <TextView
+            android:id="@+id/txtVencimento"
+            android:text="Vencimento: 15/05/2026"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+    />
+</LinearLayout>

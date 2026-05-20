@@ -3,11 +3,31 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/main"
+        android:id="@+id/activityCadastro"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".CadastroActivity">
 
+    <TextView
+            android:text="Cadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView"
+            android:textSize="34sp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:textColor="#C2185B"
+            android:textColorHighlight="#FF0000" android:shadowColor="@color/black" android:shadowDx="3"
+            android:shadowDy="2" android:shadowRadius="5"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="76dp"/>
+    <Button
+            android:text="Cadastrar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/buttonCadastrar"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginEnd="40dp" android:layout_marginStart="40dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginBottom="100dp" android:backgroundTint="#C2185B" android:shadowColor="#050505"
+            android:shadowDx="0" android:shadowRadius="10" android:shadowDy="10"
+            app:layout_constraintTop_toBottomOf="@+id/editTextCpf" app:layout_constraintVertical_bias="0.687"/>
     <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -16,19 +36,8 @@
             android:id="@+id/editTextConfirmarSenha"
             android:hint="Confirme a senha" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" android:textAlignment="center"
-            android:layout_marginEnd="20dp" android:layout_marginStart="20dp" android:textColorHint="#CA0BEA"
-            app:layout_constraintTop_toBottomOf="@+id/editTextSenhaCadastro" android:layout_marginTop="40dp"
-            app:layout_constraintHorizontal_bias="0.0"/>
-    <EditText
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:ems="10"
-            android:id="@+id/editTextTextEmailAddress"
-            android:hint="Digite seu e-mail" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="20dp"
-            android:layout_marginStart="20dp" android:textAlignment="center" android:textColorHint="#CA0BEA"
-            app:layout_constraintTop_toBottomOf="@+id/editTextText" android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp" android:layout_marginStart="20dp" android:textColorHint="#C2185B"
+            app:layout_constraintTop_toBottomOf="@+id/editTextSenhaCadastro" android:layout_marginTop="36dp"
             app:layout_constraintHorizontal_bias="0.0"/>
     <EditText
             android:layout_width="0dp"
@@ -39,47 +48,40 @@
             android:hint="Crie uma senha" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="20dp"
             android:layout_marginStart="20dp" android:textAlignment="center"
-            android:textColorHint="#CA0BEA" app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
-            android:layout_marginTop="40dp" app:layout_constraintHorizontal_bias="0.0"/>
+            android:textColorHint="#C2185B" app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
+            android:layout_marginTop="36dp" app:layout_constraintHorizontal_bias="0.0"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/editTextTextEmailAddress"
+            android:hint="Digite seu e-mail" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp" android:textAlignment="center" android:textColorHint="#C2185B"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNome" android:layout_marginTop="36dp"
+            app:layout_constraintHorizontal_bias="0.0"/>
     <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="text"
             android:ems="10"
-            android:id="@+id/editTextText"
+            android:id="@+id/editTextNome"
             android:hint="Digite seu nome" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="20dp"
             android:layout_marginStart="20dp" android:textAlignment="center"
-            android:textColorHint="#CA0BEA" app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintTop_toBottomOf="@+id/textView" android:layout_marginTop="40dp"/>
-    <TextView
-            android:text="Cadastro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView"
-            android:textSize="34sp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:textColor="#F100BB"
-            android:textColorHighlight="#FF0000" android:shadowColor="@color/black" android:shadowDx="3"
-            android:shadowDy="3" android:shadowRadius="3"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="56dp"/>
+            android:textColorHint="#C2185B" app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/textView" android:layout_marginTop="44dp"/>
     <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="text"
             android:ems="10"
-            android:id="@+id/editTextText2"
+            android:id="@+id/editTextCpf"
             android:hint="Digite seu CPF" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" android:textAlignment="center"
-            android:layout_marginStart="20dp" android:layout_marginEnd="20dp" android:textColorHint="#CA0BEA"
+            android:layout_marginStart="20dp" android:layout_marginEnd="20dp" android:textColorHint="#C2185B"
             app:layout_constraintTop_toBottomOf="@+id/editTextConfirmarSenha"
             app:layout_constraintHorizontal_bias="0.0"
-            android:layout_marginTop="40dp"/>
-    <Button
-            android:text="Cadastrar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" android:id="@+id/buttonCadastrar"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginEnd="40dp" android:layout_marginStart="40dp"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.0"
-            android:layout_marginBottom="100dp"/>
+            android:layout_marginTop="36dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

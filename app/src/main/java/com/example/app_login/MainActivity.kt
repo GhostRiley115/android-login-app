@@ -15,14 +15,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.mainHome)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.activityLogin)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        val intentHome = Intent(this,HomeActivity::class.java)
+
         val intentCadastro = Intent(this,CadastroActivity::class.java)
+        val intentHome = Intent(this,HomeActivity::class.java)
 
         val buttonLogin = findViewById<Button>(R.id.buttonLogin)
         buttonLogin.setOnClickListener {
@@ -30,6 +31,7 @@ class MainActivity : AppCompatActivity() {
             val password = findViewById<EditText>(R.id.editTextPassword).text.toString()
 
             if(email.equals("email@teste.com") && password.equals("123")){
+                intentHome.putExtra("nome","Clayton")
                 startActivity(intentHome)
                 Toast.makeText(this, "Logado!", Toast.LENGTH_LONG).show()
             }else{
