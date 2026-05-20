@@ -42,3 +42,9 @@ This project was created to practice Android development fundamentals, including
 ## Notes
 
 This is a basic project focused on learning and practicing Android development concepts
+
+## App Screenshots
+
+![Login Screen](AppImages/PrintLogin.png)
+![Register Screen](AppImages/PrintCadastro.png)
+![Home Screen](AppImages/PrintHome.png)
