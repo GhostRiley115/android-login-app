@@ -1,4 +1,5 @@
 package com.example.app_login
 
-class Mural {
-}
+class Mural (
+    val titulo : String
+)
