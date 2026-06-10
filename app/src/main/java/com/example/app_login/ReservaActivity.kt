@@ -10,30 +10,32 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class BoletoActivity : AppCompatActivity() {
+class ReservaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_boleto)
+        setContentView(R.layout.activity_reserva)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        val boletos = listOf(
-            Boleto("Taxa Condominio Maio", "R$ 1500", "18/05/2026"),
-            Boleto("Taxa Condominio Maio", "R$ 1500", "18/05/2026"),
-            Boleto("Taxa Condominio Maio", "R$ 1500", "18/05/2026"),
+        val reservas = listOf(
+            Reserva("Academia"),
+            Reserva("Brinquedoteca"),
+            Reserva("Churrasqueira"),
+            Reserva("Salão de Festa"),
+            Reserva("Salão de Jogos"),
         )
 
-        val rc = findViewById<RecyclerView>(R.id.recyclerView)
+        val rc = findViewById<RecyclerView>(R.id.recyclerViewReserva)
         rc.layoutManager = LinearLayoutManager(this)
-        rc.adapter = BoletoAdapter(boletos)
+        rc.adapter = ReservaAdapter(reservas)
 
-        val toolBarBoleto = findViewById<Toolbar>(R.id.toolbarBoleto)
-        setSupportActionBar(toolBarBoleto)
-        supportActionBar?.title = "Boleto"
+        val toolBarReserva = findViewById<Toolbar>(R.id.toolbarReserva)
+        setSupportActionBar(toolBarReserva)
+        supportActionBar?.title = "Reserva"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
     }
@@ -48,3 +50,4 @@ class BoletoActivity : AppCompatActivity() {
         }
     }
 }
+

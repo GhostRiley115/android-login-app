@@ -18,26 +18,26 @@
             android:textColorHighlight="#FF0000" android:shadowColor="@color/black" android:shadowDx="3"
             android:shadowDy="3" android:shadowRadius="3"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="38dp"
-            app:layout_constraintBottom_toTopOf="@+id/button3" android:layout_marginTop="10dp"/>
+            app:layout_constraintBottom_toTopOf="@+id/btnReserva" android:layout_marginTop="10dp"/>
     <Button
             android:text="Mural"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" android:id="@+id/button8"
+            android:layout_height="wrap_content" android:id="@+id/btnMural"
             android:height="60dp"
             android:layout_marginEnd="15dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toEndOf="@+id/button7"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toEndOf="@+id/btnAutorizacao"
             android:backgroundTint="#C2185B" android:layout_marginStart="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/button5" android:layout_marginBottom="88dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnMudanca" android:layout_marginBottom="88dp"
             android:shadowDx="0" android:shadowDy="10" android:shadowRadius="10" android:shadowColor="#070707"/>
     <Button
             android:text="Autorização"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" android:id="@+id/button7"
+            android:layout_height="wrap_content" android:id="@+id/btnAutorizacao"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="15dp" android:height="60dp"
-            app:layout_constraintEnd_toStartOf="@+id/button8"
+            app:layout_constraintEnd_toStartOf="@+id/btnMural"
             android:backgroundTint="#C2185B" android:layout_marginEnd="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/button4" android:layout_marginBottom="88dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnPrestacao" android:layout_marginBottom="88dp"
             android:shadowDx="0" android:shadowDy="10" android:shadowRadius="10" android:shadowColor="#070707"/>
     <Button
             android:text="Boleto"
@@ -45,34 +45,34 @@
             android:layout_height="wrap_content" android:id="@+id/btnBoleto"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="15dp" android:height="60dp"
-            app:layout_constraintEnd_toStartOf="@+id/button3"
+            app:layout_constraintEnd_toStartOf="@+id/btnReserva"
             android:backgroundTint="#C2185B" android:layout_marginEnd="10dp" android:layout_marginBottom="88dp"
-            app:layout_constraintBottom_toTopOf="@+id/button7" android:shadowDx="0" android:shadowDy="10"
+            app:layout_constraintBottom_toTopOf="@+id/btnAutorizacao" android:shadowDx="0" android:shadowDy="10"
             android:shadowRadius="10" android:shadowColor="#070707"/>
     <Button
             android:text="Reserva"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" android:id="@+id/button3"
+            android:layout_height="wrap_content" android:id="@+id/btnReserva"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="15dp" android:height="60dp" app:layout_constraintStart_toEndOf="@+id/btnBoleto"
             android:backgroundTint="#C2185B" android:layout_marginStart="10dp" android:layout_marginBottom="88dp"
-            app:layout_constraintBottom_toTopOf="@+id/button8" android:shadowDx="0" android:shadowDy="10"
+            app:layout_constraintBottom_toTopOf="@+id/btnMural" android:shadowDx="0" android:shadowDy="10"
             android:shadowRadius="10" android:shadowColor="#070707"/>
     <Button
             android:text="Prestação de Contas"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" android:id="@+id/button4"
+            android:layout_height="wrap_content" android:id="@+id/btnPrestacao"
             app:layout_constraintStart_toStartOf="parent"
             android:height="60dp" android:layout_marginStart="15dp"
-            app:layout_constraintEnd_toStartOf="@+id/button5"
+            app:layout_constraintEnd_toStartOf="@+id/btnMudanca"
             android:layout_marginBottom="88dp"
-            app:layout_constraintBottom_toTopOf="@+id/button" android:backgroundTint="#C2185B"
+            app:layout_constraintBottom_toTopOf="@+id/btnContatos" android:backgroundTint="#C2185B"
             android:layout_marginEnd="10dp" android:shadowDx="0" android:shadowDy="10" android:shadowRadius="10"
             android:shadowColor="#070707"/>
     <Button
             android:text="Contatos da Portaria"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" android:id="@+id/button"
+            android:layout_height="wrap_content" android:id="@+id/btnContatos"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginEnd="15dp" android:layout_marginStart="15dp"
             app:layout_constraintHorizontal_bias="0.0" android:height="60dp" android:backgroundTint="#C2185B"
@@ -81,11 +81,11 @@
     <Button
             android:text="Mudança"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" android:id="@+id/button5"
+            android:layout_height="wrap_content" android:id="@+id/btnMudanca"
             app:layout_constraintEnd_toEndOf="parent"
             android:height="60dp" android:layout_marginEnd="15dp"
-            app:layout_constraintStart_toEndOf="@+id/button4" android:layout_marginBottom="88dp"
-            app:layout_constraintBottom_toTopOf="@+id/button" android:backgroundTint="#C2185B"
+            app:layout_constraintStart_toEndOf="@+id/btnPrestacao" android:layout_marginBottom="88dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnContatos" android:backgroundTint="#C2185B"
             android:layout_marginStart="10dp" android:shadowDx="0" android:shadowDy="10" android:shadowRadius="10"
             android:shadowColor="#070707"
     />

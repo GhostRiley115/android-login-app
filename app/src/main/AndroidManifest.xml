@@ -12,6 +12,24 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.Applogin">
         <activity
+                android:name=".PrestacaoActivity"
+                android:exported="false"/>
+        <activity
+                android:name=".AutorizacaoActivity"
+                android:exported="false"/>
+        <activity
+                android:name=".ContatosActivity"
+                android:exported="false"/>
+        <activity
+                android:name=".MudancaActivity"
+                android:exported="false"/>
+        <activity
+                android:name=".MuralActivity"
+                android:exported="false"/>
+        <activity
+                android:name=".ReservaActivity"
+                android:exported="false"/>
+        <activity
                 android:name=".BoletoActivity"
                 android:exported="false"/>
         <activity
