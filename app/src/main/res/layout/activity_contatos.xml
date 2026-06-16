@@ -9,8 +9,8 @@
         tools:context=".ContatosActivity">
 
     <androidx.appcompat.widget.Toolbar
-            android:layout_width="409dp"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="?attr/actionBarSize"
             android:background="#C2185B"
             android:theme="?attr/actionBarTheme"
             android:minHeight="?attr/actionBarSize" android:id="@+id/toolbarContatos"

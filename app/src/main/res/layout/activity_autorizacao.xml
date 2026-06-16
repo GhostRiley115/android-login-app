@@ -9,13 +9,88 @@
         tools:context=".AutorizacaoActivity">
 
     <androidx.appcompat.widget.Toolbar
-            android:layout_width="409dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/toolbarAutorizacao"
+            android:layout_width="0dp"
+            android:layout_height="?attr/actionBarSize"
             android:background="#C2185B"
             android:theme="?attr/actionBarTheme"
-            android:minHeight="?attr/actionBarSize" android:id="@+id/toolbarAutorizacao"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"/>
+            android:textColor="@android:color/white"/>
+
+            <ScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:fillViewport="true"
+                    app:layout_constraintTop_toBottomOf="@id/toolbarAutorizacao"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Digite o nome completo do visitante">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="14dp"
+                            android:hint="Digite o CPF do visitante">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="14dp"
+                            android:hint="Informe o apartamento e o bloco">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="14dp"
+                            android:hint="Data da visita">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtDataVisita"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:focusable="false"
+                                    android:clickable="true"
+                                    android:cursorVisible="false"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:backgroundTint="#C2185B"
+                            android:text="Salvar Autorização"
+                            android:textColor="@android:color/white" />
+
+                </LinearLayout>
+            </ScrollView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
