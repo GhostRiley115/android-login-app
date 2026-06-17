@@ -6,16 +6,18 @@
         android:id="@+id/activityCadastro"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#F6F7F9"
         tools:context=".CadastroActivity">
 
     <TextView
             android:text="Cadastro"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView"
-            android:textSize="34sp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:textColor="#C2185B"
-            android:textColorHighlight="#FF0000" android:shadowColor="@color/black" android:shadowDx="3"
-            android:shadowDy="2" android:shadowRadius="5"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="#1E293B"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="76dp"/>
     <Button

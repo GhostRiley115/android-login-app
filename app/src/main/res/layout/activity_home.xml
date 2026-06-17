@@ -6,19 +6,24 @@
         android:id="@+id/activityHome"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".HomeActivity" android:background="#FFFFFF" tools:layout_editor_absoluteY="491dp"
+        tools:context=".HomeActivity"
+        android:background="#F6F7F9"
+        tools:layout_editor_absoluteY="491dp"
         tools:layout_editor_absoluteX="1dp">
 
     <TextView
             android:text="Olá, Fulano"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textViewHome"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewHome"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:textSize="34sp" android:textColor="#C2185B"
-            android:textColorHighlight="#FF0000" android:shadowColor="@color/black" android:shadowDx="3"
-            android:shadowDy="3" android:shadowRadius="3"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="38dp"
-            app:layout_constraintBottom_toTopOf="@+id/btnReserva" android:layout_marginTop="10dp"/>
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="34sp"
+            android:textColor="#1E293B"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="38dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnReserva"
+            android:layout_marginTop="10dp"/>
     <Button
             android:text="Mural"
             android:layout_width="0dp"

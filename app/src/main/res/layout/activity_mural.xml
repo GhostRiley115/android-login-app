@@ -6,13 +6,15 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#F6F7F9"
+        app:titleTextColor="#FFFFFF"
         tools:context=".MuralActivity">
 
     <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbarMural"
             android:layout_width="0dp"
             android:layout_height="?attr/actionBarSize"
-            android:background="#C2185B"
+            android:background="#1F3A5F"
             android:theme="?attr/actionBarTheme"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"

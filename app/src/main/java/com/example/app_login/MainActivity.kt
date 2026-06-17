@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -25,10 +26,10 @@ class MainActivity : AppCompatActivity() {
         val intentCadastro = Intent(this,CadastroActivity::class.java)
         val intentHome = Intent(this,HomeActivity::class.java)
 
-        val buttonLogin = findViewById<Button>(R.id.buttonLogin)
+        val buttonLogin = findViewById<Button>(R.id.btnLogin)
         buttonLogin.setOnClickListener {
-            val email = findViewById<EditText>(R.id.editTextEmail).text.toString()
-            val password = findViewById<EditText>(R.id.editTextPassword).text.toString()
+            val email = findViewById<EditText>(R.id.etEmail).text.toString()
+            val password = findViewById<EditText>(R.id.etPassword).text.toString()
 
             if(email.equals("email@teste.com") && password.equals("123")){
                 intentHome.putExtra("nome","Clayton")
@@ -39,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val buttonCadastro = findViewById<Button>(R.id.buttonCadastro)
+        val buttonCadastro = findViewById<TextView>(R.id.txtCriarConta)
         buttonCadastro.setOnClickListener {
             startActivity(intentCadastro)
         }
