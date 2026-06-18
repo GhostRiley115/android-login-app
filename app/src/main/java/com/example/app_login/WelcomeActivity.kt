@@ -1,12 +1,8 @@
 package com.example.app_login
 
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.LinearGradient
-import android.graphics.Shader
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -36,7 +32,7 @@ class WelcomeActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_welcome)
 
-        val btnIniciar = findViewById<Button>(R.id.btnIniciar)
+        val btnIniciar = findViewById<Button>(R.id.botaoIniciar)
 
         btnIniciar.setOnClickListener {
             prefs.edit().putBoolean("has_seen_welcome", true).apply()

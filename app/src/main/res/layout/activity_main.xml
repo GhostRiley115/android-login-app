@@ -6,145 +6,227 @@
         android:id="@+id/activityLogin"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#F6F7F9"
-        tools:context=".MainActivity"
-        android:textAlignment="center">
+        android:background="@color/condo_background"
+        tools:context=".MainActivity">
 
     <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:tint="#1E293B"
+            android:id="@+id/ivLoginLogo"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="24dp"
+            android:alpha="0.90"
             app:srcCompat="@drawable/logo_def"
-            android:id="@+id/imageView2"
+            app:tint="@color/condo_title"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/textViewTitulo"/>
+            app:layout_constraintBottom_toTopOf="@+id/tvLoginTitulo" />
 
     <TextView
+            android:id="@+id/tvLoginTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:text="Acesse sua conta"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="188dp"
-            android:id="@+id/textViewTitulo"
-            android:textColor="#1E293B"
+            android:textColor="@color/condo_title"
             android:textAlignment="center"
-            android:textColorHighlight="#FF0000"
-            android:textSize="34sp"
-            android:textStyle="bold"/>
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivLoginLogo" />
 
     <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLoginEmail"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
-            android:layout_marginTop="75dp"
-            android:id="@+id/tilEmail"
-
+            android:layout_marginTop="28dp"
             app:boxBackgroundMode="filled"
+            app:boxBackgroundColor="@color/condo_card"
             app:boxCornerRadiusTopStart="16dp"
             app:boxCornerRadiusTopEnd="16dp"
             app:boxCornerRadiusBottomStart="16dp"
             app:boxCornerRadiusBottomEnd="16dp"
-
-            app:layout_constraintTop_toBottomOf="@+id/textViewTitulo"
+            app:boxStrokeColor="@color/textfield_stroke_color"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:hintTextColor="@color/textfield_hint_color"
+            app:layout_constraintTop_toBottomOf="@+id/tvLoginTitulo"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-    >
-            <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Digite seu E-mail"
-                    android:inputType="textEmailAddress"/>
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLoginEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Digite seu E-mail"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/condo_text"
+                android:textColorHint="@color/condo_text_disabled"
+                android:textCursorDrawable="@drawable/cursor_azul" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilPassword"
+            android:id="@+id/tilLoginSenha"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
-            android:layout_marginTop="50dp"
-
+            android:layout_marginTop="16dp"
             app:endIconMode="password_toggle"
-
+            app:endIconTint="@color/condo_primary"
             app:boxBackgroundMode="filled"
+            app:boxBackgroundColor="@color/condo_card"
             app:boxCornerRadiusTopStart="16dp"
             app:boxCornerRadiusTopEnd="16dp"
             app:boxCornerRadiusBottomStart="16dp"
             app:boxCornerRadiusBottomEnd="16dp"
-
-            app:layout_constraintTop_toBottomOf="@+id/tilEmail"
+            app:boxStrokeColor="@color/textfield_stroke_color"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:hintTextColor="@color/textfield_hint_color"
+            app:layout_constraintTop_toBottomOf="@+id/tilLoginEmail"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-    >
-            <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="Digite sua senha"
-                    android:inputType="textPassword"/>
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLoginPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Digite sua senha"
+                android:inputType="textPassword"
+                android:textColor="@color/condo_text"
+                android:textColorHint="@color/condo_text_disabled"
+                android:textCursorDrawable="@drawable/cursor_azul" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.cardview.widget.CardView
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerConectado_Esqueci"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/tilLoginSenha"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cbManterConectado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manter-me conectado"
+                android:textSize="14sp"
+                android:textColor="@color/condo_text"
+                app:buttonTint="@color/checkbox_color"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+                android:id="@+id/txtEsqueciSenha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Esqueceu sua senha?"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/condo_primary"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cbManterConectado"
+                app:layout_constraintBottom_toBottomOf="@+id/cbManterConectado" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoEntrar"
             android:layout_width="0dp"
             android:layout_height="56dp"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginBottom="40dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="15dp"
-
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="24dp"
+            android:text="Entrar"
+            android:textColor="@color/condo_white"
+            android:textStyle="bold"
+            app:backgroundTint="#1F3A5F"
+            app:cornerRadius="20dp"
+            app:layout_constraintTop_toBottomOf="@id/containerConectado_Esqueci"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tilPassword" android:id="@+id/cardView5">
-
-        <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnLogin"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Entrar"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:shadowColor="#000000"
-                android:shadowDx="0"
-                android:shadowDy="5"
-                android:shadowRadius="25"
-                android:background="@drawable/button_gradient"
-                app:backgroundTint="@null"/>
-    </androidx.cardview.widget.CardView>
+            app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
             android:id="@+id/txtSemConta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:text="Não possui conta?"
-            android:textColor="#64748B"
+            android:textColor="@color/condo_subtitle"
             android:textSize="14sp"
-
-            app:layout_constraintTop_toBottomOf="@+id/cardView5"
+            app:layout_constraintTop_toBottomOf="@+id/botaoEntrar"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+            android:layout_width="80dp"
+            android:layout_height="1dp"
+            android:alpha="0.25"
+            android:background="@color/condo_border"
+            app:layout_constraintTop_toBottomOf="@id/botaoEntrar"
+            app:layout_constraintBottom_toTopOf="@id/txtSemConta"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="24dp"/>
+            app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
             android:id="@+id/txtCriarConta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:text="Criar conta"
             android:textStyle="bold"
-            android:textColor="#1F3A5F"
+            android:textColor="@color/condo_primary"
             android:textSize="16sp"
             android:clickable="true"
             android:focusable="true"
-
             app:layout_constraintTop_toBottomOf="@+id/txtSemConta"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="8dp"
-    />
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+            android:id="@+id/layoutRodape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="100dp"
+            app:layout_constraintTop_toBottomOf="@id/txtCriarConta"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+                android:id="@+id/imgEmpresa"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/jujubalogo"
+                android:alpha="0.7" />
+
+        <TextView
+                android:id="@+id/txtCopyright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="© 2026 Jujuba's Dev. Todos os direitos reservados."
+                android:textColor="@color/condo_subtitle"
+                android:textSize="12sp" />
+    </LinearLayout>
+
+    <View
+            android:id="@+id/footerLoginGradient"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:background="@drawable/background_gradient"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

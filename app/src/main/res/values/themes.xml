@@ -1,8 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Applogin" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">#1F3A5F</item>
+        <item name="colorPrimaryVariant">#1E293B</item>
+        <item name="colorSecondary">#1F3A5F</item>
+        <item name="colorControlActivated">#1F3A5F</item>
+        <item name="colorControlHighlight">#221F3A5F</item>
+        <item name="android:colorAccent">#1F3A5F</item>
     </style>
 
     <style name="Theme.Applogin" parent="Base.Theme.Applogin"/>

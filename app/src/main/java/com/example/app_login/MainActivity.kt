@@ -26,10 +26,10 @@ class MainActivity : AppCompatActivity() {
         val intentCadastro = Intent(this,CadastroActivity::class.java)
         val intentHome = Intent(this,HomeActivity::class.java)
 
-        val buttonLogin = findViewById<Button>(R.id.btnLogin)
+        val buttonLogin = findViewById<Button>(R.id.botaoEntrar)
         buttonLogin.setOnClickListener {
-            val email = findViewById<EditText>(R.id.etEmail).text.toString()
-            val password = findViewById<EditText>(R.id.etPassword).text.toString()
+            val email = findViewById<EditText>(R.id.etLoginEmail).text.toString()
+            val password = findViewById<EditText>(R.id.etLoginPassword).text.toString()
 
             if(email.equals("email@teste.com") && password.equals("123")){
                 intentHome.putExtra("nome","Clayton")

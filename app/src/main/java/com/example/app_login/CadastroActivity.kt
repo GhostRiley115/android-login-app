@@ -23,10 +23,10 @@ class CadastroActivity : AppCompatActivity() {
 
         val intentHome = Intent(this,HomeActivity::class.java)
 
-            val buttonCadastrar = findViewById<Button>(R.id.buttonCadastrar)
+            val buttonCadastrar = findViewById<Button>(R.id.botaoCadastrar)
             buttonCadastrar.setOnClickListener {
-                val senha1 = findViewById<EditText>(R.id.editTextSenhaCadastro).text.toString()
-                val senha2 = findViewById<EditText>(R.id.editTextConfirmarSenha).text.toString()
+                val senha1 = findViewById<EditText>(R.id.etCadastroSenha).text.toString()
+                val senha2 = findViewById<EditText>(R.id.etCadastroConfirmarSenha).text.toString()
                 if (senha1.equals(senha2) && senha1.isNotEmpty() && senha2.isNotEmpty()) {
                     Toast.makeText(this, "Usuário cadastrado", Toast.LENGTH_LONG).show()
                     startActivity(intentHome)
