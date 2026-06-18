@@ -6,15 +6,15 @@
         android:id="@+id/activityCadastro"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#F6F7F9"
+        android:background="@color/condo_background"
         tools:context=".CadastroActivity">
 
     <TextView
+            android:id="@+id/tvCadastroTitulo"
             android:text="Cadastro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
-            android:id="@+id/tvCadastroTitulo"
+            android:layout_marginTop="24dp"
             android:textSize="28sp"
             android:textStyle="bold"
             android:textColor="#1E293B"
@@ -23,14 +23,14 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
+
     <TextView
             android:id="@+id/tvCadastroSubTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="12dp"
             android:text="Crie sua conta para acessar boletos, reservas, seus visitantes e muito mais."
             android:textSize="14sp"
-            android:textStyle="bold"
             android:textColor="#64748B"
             android:gravity="center"
             android:lineSpacingExtra="4dp"
@@ -47,11 +47,15 @@
             android:layout_marginHorizontal="24dp"
 
             app:boxBackgroundMode="filled"
-            app:boxBackgroundColor="#FFFFFF"
+            app:boxBackgroundColor="@color/condo_card"
             app:boxCornerRadiusTopStart="16dp"
             app:boxCornerRadiusTopEnd="16dp"
             app:boxCornerRadiusBottomStart="16dp"
             app:boxCornerRadiusBottomEnd="16dp"
+            app:boxStrokeColor="@color/textfield_stroke_color"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:hintTextColor="@color/textfield_hint_color"
 
             app:layout_constraintTop_toBottomOf="@+id/tvCadastroSubTitulo"
             app:layout_constraintEnd_toEndOf="parent"
@@ -62,22 +66,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Digite seu nome"
-                android:inputType="text"/>
+                android:inputType="text"
+                android:textColor="@color/condo_text"
+                android:textColorHint="@color/condo_text_disabled"
+                android:textCursorDrawable="@drawable/cursor_azul"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilCadastroEmail"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="24dp"
             android:layout_marginHorizontal="24dp"
 
             app:boxBackgroundMode="filled"
-            app:boxBackgroundColor="#FFFFFF"
+            app:boxBackgroundColor="@color/condo_card"
             app:boxCornerRadiusTopStart="16dp"
             app:boxCornerRadiusTopEnd="16dp"
             app:boxCornerRadiusBottomStart="16dp"
             app:boxCornerRadiusBottomEnd="16dp"
+            app:boxStrokeColor="@color/textfield_stroke_color"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:hintTextColor="@color/textfield_hint_color"
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -88,22 +99,29 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Digite seu e-mail"
-                    android:inputType="textEmailAddress"/>
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/condo_text"
+                    android:textColorHint="@color/condo_text_disabled"
+                    android:textCursorDrawable="@drawable/cursor_azul"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilCadastroContato"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="24dp"
             android:layout_marginHorizontal="24dp"
 
             app:boxBackgroundMode="filled"
-            app:boxBackgroundColor="#FFFFFF"
+            app:boxBackgroundColor="@color/condo_card"
             app:boxCornerRadiusTopStart="16dp"
             app:boxCornerRadiusTopEnd="16dp"
             app:boxCornerRadiusBottomStart="16dp"
             app:boxCornerRadiusBottomEnd="16dp"
+            app:boxStrokeColor="@color/textfield_stroke_color"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:hintTextColor="@color/textfield_hint_color"
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -113,48 +131,59 @@
                 android:id="@+id/etCadastroContato"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Telefone para contato"/>
+                android:hint="Numero para contato"
+                android:inputType="phone"
+                android:textColor="@color/condo_text"
+                android:textColorHint="@color/condo_text_disabled"
+                android:textCursorDrawable="@drawable/cursor_azul"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilCadastroVinculo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="24dp"
             android:layout_marginHorizontal="24dp"
-
             app:boxBackgroundMode="filled"
-            app:boxBackgroundColor="#FFFFFF"
+            app:boxBackgroundColor="@color/condo_card"
             app:boxCornerRadiusTopStart="16dp"
             app:boxCornerRadiusTopEnd="16dp"
             app:boxCornerRadiusBottomStart="16dp"
             app:boxCornerRadiusBottomEnd="16dp"
-
-            app:layout_constraintEnd_toEndOf="parent"
+            app:endIconMode="dropdown_menu"
+            app:hintTextColor="@color/textfield_hint_color"
+            app:layout_constraintTop_toBottomOf="@id/tilCadastroContato"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tilCadastroContato">
+            app:layout_constraintEnd_toEndOf="parent">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
                 android:id="@+id/etCadastroVinculo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Informe seu vinculo (dependente, cônjuge ou inquilino)"/>
+                android:hint="Tipo de vínculo"
+                android:inputType="none"
+                android:textColor="@color/condo_text"
+                android:textColorHint="@color/condo_text_disabled"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilCadastroSenha"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="24dp"
             android:layout_marginHorizontal="24dp"
 
             app:endIconMode="password_toggle"
             app:boxBackgroundMode="filled"
-            app:boxBackgroundColor="#FFFFFF"
+            app:boxBackgroundColor="@color/condo_card"
             app:boxCornerRadiusTopStart="16dp"
             app:boxCornerRadiusTopEnd="16dp"
             app:boxCornerRadiusBottomStart="16dp"
             app:boxCornerRadiusBottomEnd="16dp"
+            app:boxStrokeColor="@color/textfield_stroke_color"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:hintTextColor="@color/textfield_hint_color"
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -165,7 +194,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Crie sua senha"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword"
+                android:textColor="@color/condo_text"
+                android:textColorHint="@color/condo_text_disabled"
+                android:textCursorDrawable="@drawable/cursor_azul"/>
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -173,16 +205,20 @@
             android:id="@+id/tilCadastroConfirmarSenha"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="24dp"
             android:layout_marginHorizontal="24dp"
 
             app:endIconMode="password_toggle"
             app:boxBackgroundMode="filled"
-            app:boxBackgroundColor="#FFFFFF"
+            app:boxBackgroundColor="@color/condo_card"
             app:boxCornerRadiusTopStart="16dp"
             app:boxCornerRadiusTopEnd="16dp"
             app:boxCornerRadiusBottomStart="16dp"
             app:boxCornerRadiusBottomEnd="16dp"
+            app:boxStrokeColor="@color/textfield_stroke_color"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:hintTextColor="@color/textfield_hint_color"
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -193,7 +229,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Confirme sua senha"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword"
+                android:textColor="@color/condo_text"
+                android:textColorHint="@color/condo_text_disabled"
+                android:textCursorDrawable="@drawable/cursor_azul"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
@@ -202,8 +241,7 @@
             android:layout_height="56dp"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
-            android:layout_marginBottom="40dp"
-            android:text="Entrar"
+            android:text="Finalizar cadastro"
             android:textColor="@color/condo_white"
             android:textStyle="bold"
             app:cornerRadius="20dp"
