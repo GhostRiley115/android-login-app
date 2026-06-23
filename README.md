@@ -48,6 +48,8 @@ This is a basic project focused on learning and practicing Android development c
 
 ## App Screenshots
 
-![Login Screen](AppImages/PrintLogin.png)
-![Register Screen](AppImages/PrintCadastro.png)
-![Home Screen](AppImages/PrintHome.png)
+![Welcome Screen](mobile-android/AppImages/printWelcome.png)
+![Login Screen](mobile-android/AppImages/printLogin.png)
+![Register Screen](mobile-android/AppImages/printCadastro.png)
+![Home Screen](mobile-android/AppImages/printHome.png)
+
