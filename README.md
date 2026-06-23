@@ -52,4 +52,3 @@ This is a basic project focused on learning and practicing Android development c
 ![Login Screen](mobile-android/AppImages/printLogin.png)
 ![Register Screen](mobile-android/AppImages/printCadastro.png)
 ![Home Screen](mobile-android/AppImages/printHome.png)
-
